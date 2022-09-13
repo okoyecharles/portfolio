@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em 2em 1em 5em;
   font-size: 0.9em;
 }
@@ -14,6 +15,16 @@
 } */
 .header__logo {
   cursor: pointer;
+}
+
+.header__navToggle {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.header__navToggle--close {
+  font-size: 2em;
+  align-self: flex-end;
 }
 
 .header__navLinks {
@@ -82,4 +93,50 @@
   ;
   transform-origin: left;
   transform: scaleX(1);
+}
+
+
+@media screen and (max-width: 700.5px) {
+  .header {
+    padding: 1em 2em;
+  }
+
+  .header__nav {
+    position: absolute;
+    background: black;
+    padding: 1em 2em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+    opacity .2s .25s ease,
+      transform .5s cubic-bezier(1, 0, 0, 1)
+    ;
+  }
+
+  .header__nav.active {
+    transition:
+      opacity .25s ease,
+      transform .25s cubic-bezier(1, 0, 0, 1)
+    ;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .header__nav * {
+    color: #fff !important;
+  }
+
+  .header__navLinks {
+    flex-direction: column;
+    padding: 10em 2em 1em;
+    gap: 2em;
+  }
 }
