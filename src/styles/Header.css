@@ -99,12 +99,13 @@
 @media screen and (max-width: 700.5px) {
   .header {
     padding: 1em 2em;
+    font-size: clamp(1em, 6vw, 1.1em);
   }
 
   .header__nav {
     position: absolute;
     background: black;
-    padding: 1em 2em;
+    padding: 1em 2em 3em;
     top: 0;
     left: 0;
     width: 100%;
@@ -115,7 +116,7 @@
     pointer-events: none;
 
     transition:
-    opacity .2s .25s ease,
+      opacity .1s .25s ease,
       transform .5s cubic-bezier(1, 0, 0, 1)
     ;
   }
