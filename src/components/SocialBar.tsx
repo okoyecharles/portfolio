@@ -51,7 +51,7 @@ const SocialBar: React.FC = () => {
           >
             <FaAngellist />
             <div>
-              <span>AngelList</span>
+              <span>Angellist</span>
             </div>
           </a>
         </li>
