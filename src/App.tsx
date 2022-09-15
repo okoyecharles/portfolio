@@ -17,7 +17,7 @@ const App: React.FC = () => {
     <div className="App">
       <Header mediaWidth={mediaWidth} />
       {mediaWidth > 700 && (<SocialBar />)}
-      <Home />
+      <Home mediaWidth={mediaWidth} />
     </div>
   );
 };

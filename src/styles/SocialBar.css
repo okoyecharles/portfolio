@@ -1,6 +1,6 @@
 .socialBar {
-  background: rgba(141, 141, 141, 0.161);
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1), 0 0 0 .05em rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.05), 0 0 0 .05em rgba(0, 0, 0, 0.1);
 
   position: fixed;
   transform: translateY(-50%);
@@ -21,17 +21,17 @@
   gap: 0.5em;
 }
 
-.socialBar__links a {
+.socialBar__links li a {
   isolation: isolate;
   position: relative;
   color: #111;
 }
 
-.socialBar__links a > :nth-child(1) {
+.socialBar__links li a > :nth-child(1) {
   opacity: 1;
 }
 
-.socialBar__links a div {
+.socialBar__links li a div {
   z-index: -1;
   pointer-events: none;
   background-color: transparent;
@@ -47,13 +47,13 @@
   transition: .2s ease-out;
 }
 
-.socialBar__links a > div > span {
+.socialBar__links li a > div > span {
   margin-left: -1em;
   font-size: 0.85em;
   opacity: 0;
 }
 
-.socialBar__links a:hover > :nth-child(1) {
+.socialBar__links li a:hover > :nth-child(1) {
   transition:
     transform .25s ease,
     opacity .2s ease
@@ -62,7 +62,7 @@
   opacity: 0;
 }
 
-.socialBar__links a:hover div {
+.socialBar__links li a:hover div {
   transition:
   width .5s ease,
   backkground-color .5s ease-in
@@ -71,10 +71,10 @@
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   box-shadow: 0 0 0 .05em rgba(0, 0, 0, 0.1);
-  width: 430%;
+  width: 440%;
 }
 
-.socialBar__links a:hover div span {
+.socialBar__links li a:hover div span {
   transition:
     margin-left .5s .1s ease,
     opacity .25s .2s ease-in
