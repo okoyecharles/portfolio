@@ -1,7 +1,7 @@
 .home {
   min-height: 90vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   max-width: 1600px;
   margin-inline: auto;
 }
@@ -65,7 +65,8 @@
 }
 
 .home__image img {
-  width: 95%; 
+  width: 95%;
+  margin-left: auto;
 }
 
 .home__image::after {

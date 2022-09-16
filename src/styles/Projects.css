@@ -1,0 +1,43 @@
+.projects {
+  background: #111;
+  min-height: 100vh;
+}
+
+.projects * {
+  color: #fff;
+}
+
+.projects__container {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: 1em 1.8em 0 4.5em;
+}
+
+.projects__header {
+  width: fit-content;
+  font-size: 1.5em;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.projects__header::after {
+  position: absolute;
+  content: '';
+  bottom: -0.25em;
+  left: 0.5rem;
+  width: 100%;
+  height: 0.75em;
+  background: rgba(255, 255, 255, 0.125);
+}
+
+.projects__coa {
+  margin-bottom: 2em;
+  font-size: 1.375em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.projects__coa strong {
+  color: rgba(255, 255, 255, 0.9);
+}

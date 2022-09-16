@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
-import OkoyeCharles from "../images/OkoyeCharles.png";
+import OkoyeCharles from "../images/personal/OkoyeCharles.png";
+import OkoyeCharlesSm from "../images/personal/OkoyeCharles-sm.png";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
@@ -71,7 +72,7 @@ const Home: React.FC<HomeProps> = ({ mediaWidth }) => {
           </div>
         ) : (
           <div className="home__image">
-            <img src={OkoyeCharles} alt="Okoye Charles" />
+            <img src={OkoyeCharlesSm} alt="Okoye Charles" />
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
 import SocialBar from "./components/SocialBar";
 
 const App: React.FC = () => {
@@ -14,11 +15,12 @@ const App: React.FC = () => {
     setMediaWidth(window.innerWidth);
   });
   return (
-    <div className="App">
+    <main className="App">
       <Header mediaWidth={mediaWidth} />
       {mediaWidth > 700 && (<SocialBar />)}
       <Home mediaWidth={mediaWidth} />
-    </div>
+      <Projects mediaWidth={mediaWidth} />
+    </main>
   );
 };
 
