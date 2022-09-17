@@ -41,7 +41,7 @@ const AboutGrid: React.FC = () => {
             <div className="aboutCard__content">
               <Reveal triggerOnce damping={0.125} fraction={1} cascade keyframes={cardIdx % 2 === 0 ? slideLeft: slideRight}>
                 <h3 className="aboutCard__title">{card.title}</h3>
-                <div className="aboutCard__description">{card.description}</div>
+                <div className="aboutCard__description" dangerouslySetInnerHTML={{__html: card.description}}>{}</div>
               </Reveal>
             </div>
           </div>

@@ -81,10 +81,6 @@ transition: .25s ease;
   left: -2em;
 }
 
-.aboutCard__image:hover img {
-  transform: scale(0.975);
-}
-
 .aboutCard__title {
   position: relative;
   font-size: 1.5em;
@@ -113,6 +109,11 @@ transition: .25s ease;
 .aboutCard__description {
   font-size: 1.25em;
   font-weight: 300;
+}
+
+.aboutCard__description strong {
+  font-weight: 400;
+  opacity: 0.75;
 }
 
 @media screen and (max-width: 700px) {

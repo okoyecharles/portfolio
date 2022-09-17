@@ -28,7 +28,7 @@ const About: React.FC = () => {
               with experience creating{" "}
               <strong>unique, high-end, and innovative</strong> products.
             </span>
-            <span>Here's a little bit more about me...</span>
+            <span>Here's a little bit more about Okoye Charles...</span>
           </Reveal>
         </div>
         <AboutGrid />
