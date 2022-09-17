@@ -41,3 +41,18 @@
 .projects__coa strong {
   color: rgba(255, 255, 255, 0.9);
 }
+
+@media screen and (max-width: 700px) {
+  .projects__container {
+    padding: 1.8em;
+  }
+
+  .projects__header {
+    font-size: clamp(1.25em, 4vw, 1.5em);
+  }
+
+  .projects__coa {
+    font-size: clamp(1em, 3.5vw, 1.25em);
+    text-align: center;
+  }
+}

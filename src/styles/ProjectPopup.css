@@ -10,10 +10,6 @@
   opacity: 0;
   transition: 1s ease;
 }
-/* 
-.projectPopup * {
-  box-shadow: inset 0 0 0 0.05em red;
-} */
 
 .projectPopup__container {
   position: relative;
@@ -21,14 +17,17 @@
   height: 100%;
   isolation: isolate;
   padding: 2em;
+  max-width: 1600px;
+  margin-inline: auto;
+  max-height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.projectPopup__container::before,
-.projectPopup__container::after {
+.projectPopup::before,
+.projectPopup::after {
   content: '';
   position: absolute;
   height: 0%;
@@ -37,13 +36,13 @@
   transition: 0.25s ease-in;
 }
 
-.projectPopup__container::before {
+.projectPopup::before {
   top: 0;
   left: 0;
   background: #222;
 }
 
-.projectPopup__container::after {
+.projectPopup::after {
   bottom: 0;
   right: 0;
   background: #222;
@@ -57,8 +56,8 @@
   opacity: 1;
 }
 
-.projectPopup.active .projectPopup__container::before,
-.projectPopup.active .projectPopup__container::after {
+.projectPopup.active::before,
+.projectPopup.active::after {
   transition: .25s ease-in;
   height: 100%;
 }
@@ -90,7 +89,7 @@
 }
 
 .projectPopup__title {
-  font-size: clamp(2em, 6vw, 4em);
+  font-size: clamp(1.5em, 4.5vw, 4em);
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0.5em;
@@ -126,6 +125,7 @@
   margin-bottom: 1em;
   opacity: 0;
   transform: translateX(2rem);
+  font-size: clamp(0.75em, 2vw, 1em);
 }
 
 .projectPopup__stack > span {
@@ -142,7 +142,7 @@
 }
 
 .projectPopup__description {
-  font-size: 1.25em;
+  font-size: clamp(0.85em, 2.5vw, 1.25em);
   font-weight: 300;
   margin-bottom: 1em;
   opacity: 0;
@@ -150,21 +150,14 @@
 }
 
 .projectPopup__image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex: 1;
+  max-height: 35vh;
 }
 
 .projectPopup__image img {
-  position: absolute;
   border-radius: 0.25em;
-  box-shadow: 0 0 1.25em #000;
-  top: 0;
-  left: 0;
   height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-inline: auto;
+  box-shadow: 0 0 1.25em #000;
   opacity: 0;
 }
 
@@ -173,6 +166,7 @@
   display: flex;
   justify-content: center;
   gap: 1em;
+  font-size: clamp(0.75em, 2.5vw, 1em);
 }
 
 .projectPopup__links a {
@@ -244,4 +238,15 @@
   transition: .45s .8s ease;
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 700px) {
+  .projectPopup__content {
+    justify-content: center;
+    gap: 0.5em;
+  }
+
+  .projectPopup__links button {
+    padding: 0.5em 1em;
+  }
 }

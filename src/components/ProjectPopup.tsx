@@ -9,12 +9,14 @@ import "../styles/ProjectPopup.css";
 interface ProjectPopupProps {
   index: number;
   popupDisplayed: boolean;
+  mediaWidth: number;
   togglePopup: (index: number, active: boolean) => void;
 }
 
 const ProjectPopup: React.FC<ProjectPopupProps> = ({
   popupDisplayed,
   index,
+  mediaWidth,
   togglePopup,
 }) => {
   const project = projects[index];
@@ -42,8 +44,8 @@ const ProjectPopup: React.FC<ProjectPopupProps> = ({
             </a>
           </h2>
           <div className="projectPopup__stack">
-            {project.stack.map((stack) => (
-              <span>{stack}</span>
+            {project.stack.map((stack, stackIdx) => (
+              <span key={stackIdx}>{stack}</span>
             ))}
           </div>
           <p className="projectPopup__description">{project.description}</p>
@@ -57,14 +59,14 @@ const ProjectPopup: React.FC<ProjectPopupProps> = ({
             target="_blank"
             rel="noreferrer-noopener"
           >
-            <button>View Live <CgArrowTopRightR /></button>
+            <button>View Live {mediaWidth > 370 && (<CgArrowTopRightR />)}</button>
           </a>
           <a
             href={project.links.github}
             target="_blank"
             rel="noreferrer-noopener"
           >
-            <button>View Source <FiGithub /></button>
+            <button>View Source {mediaWidth > 370 && (<FiGithub />)}</button>
           </a>
         </div>
       </div>

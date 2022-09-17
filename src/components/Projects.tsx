@@ -3,7 +3,19 @@ import ProjectGrid from "./ProjectGrid";
 import "../styles/Projects.css";
 import projects from "../data/projects";
 import ProjectPopup from "./ProjectPopup";
-import { Fade } from "react-awesome-reveal";
+import { Reveal } from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+
+const slideUp = keyframes`
+  from {
+    transform: translateY(2em);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 interface ProjectsProps {
   mediaWidth: number;
@@ -22,14 +34,14 @@ const Projects: React.FC<ProjectsProps> = ({ mediaWidth }) => {
     <section className="projects">
       <div className="projects__container">
         <h2 className="projects__header">Projects</h2>
-        <Fade triggerOnce fraction={1} delay={100}>
+        <Reveal triggerOnce fraction={1} delay={100} keyframes={slideUp}>
           <div className="projects__coa">
             I'm a <strong>creative</strong> developer who loves to work on{" "}
             <strong>excellent and appealing websites</strong> with a passion for
             UI/UX... always yielding high returns on what is invested. Below
             showcases some of my latest projects.
           </div>
-        </Fade>
+        </Reveal>
         <ProjectGrid
           projects={projects}
           mediaWidth={mediaWidth}
@@ -37,6 +49,7 @@ const Projects: React.FC<ProjectsProps> = ({ mediaWidth }) => {
         />
         <ProjectPopup
           popupDisplayed={popupDisplayed}
+          mediaWidth={mediaWidth}
           index={popupIndex}
           togglePopup={togglePopup}
         />
