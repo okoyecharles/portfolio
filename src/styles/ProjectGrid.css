@@ -223,7 +223,7 @@ Not supported in Firefox and IE */
 
   .projectCard__note {
     padding: 0em 0.5em 0.75em;
-    font-size: clamp(1em, 4vw, 1.5em);
+    font-size: clamp(0.85em, 3vw, 1.25em);
   }
 
   .projectCard__arrow {

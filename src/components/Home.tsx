@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import OkoyeCharles from "../images/personal/OkoyeCharles.png";
 import OkoyeCharlesSm from "../images/personal/OkoyeCharles-sm.png";
@@ -67,7 +67,10 @@ const Home: React.FC<HomeProps> = ({ mediaWidth }) => {
         {mediaWidth > 800 ? (
           <div className="home__image">
             <Reveal triggerOnce keyframes={slideInL} damping={0.25}>
-              <img src={OkoyeCharles} alt="Okoye Charles" />
+              <img
+                src={OkoyeCharles}
+                alt="Okoye Charles"
+              />
             </Reveal>
           </div>
         ) : (

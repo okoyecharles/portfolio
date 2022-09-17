@@ -1,0 +1,113 @@
+.aboutSkills {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutLanguages {
+  display: flex;
+  padding-block: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutLanguages h2, .aboutPerks h2 {
+  font-size: 1.75em;
+  font-weight: 300;
+  text-decoration: underline;
+  margin-bottom: 1em;
+}
+
+.aboutLanguages__grid {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  list-style-type: none;
+}
+
+.aboutLanguages__grid li {
+  position: relative;
+  background: #111;
+  display: flex;
+  padding: 1em;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+  transition: 0.35s ease;
+}
+
+.aboutLanguages__grid li > *:nth-child(1) {
+  color: #ddd;
+  font-size: 2em;
+  transition: 0.35s ease;
+}
+
+.aboutLanguages__grid li > *:nth-child(2) {
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.aboutLanguages__grid li:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 2em lightgray, 0 0 0.25em lightgray;
+}
+
+.aboutLanguages__grid li:hover > *:nth-child(1) {
+  color: lightgray;
+  filter: drop-shadow(0 0 0.125em lightgray);
+}
+
+.aboutLanguages__grid li:hover > *:nth-child(2) {
+  opacity: 1;
+}
+
+.aboutPerks h2 {
+  text-align: center;
+}
+
+.aboutPerks__grid {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutPerks__grid > * {
+  font-size: 1.25em;
+  font-weight: 300;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, 0.2);
+  transition: .25s ease;
+}
+
+.aboutPerks__grid > *:hover {
+  box-shadow: 0 0 .75em rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 700px) {
+  .aboutLanguages h2, .aboutPerks h2 {
+    font-size: clamp(1.25em, 4vw, 1.5em);
+  }
+
+  .aboutLanguages__grid li > *:nth-child(1),
+  .aboutLanguages__grid li > *:nth-child(2) {
+    font-size: clamp(1em, 3.5vw, 1.25em);
+  }
+
+  .aboutLanguages__grid li {
+    padding: clamp(0.5em, 2.5vw, 1em);
+  }
+
+  .aboutPerks__grid {
+    font-size: clamp(0.75em, 2.25vw, 1em);
+  }
+}

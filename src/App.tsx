@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes } from "react-router-dom";
+import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
@@ -17,9 +18,10 @@ const App: React.FC = () => {
   return (
     <main className="App">
       <Header mediaWidth={mediaWidth} />
-      {mediaWidth > 700 && (<SocialBar />)}
+      {mediaWidth > 700 && <SocialBar />}
       <Home mediaWidth={mediaWidth} />
       <Projects mediaWidth={mediaWidth} />
+      <About />
     </main>
   );
 };
