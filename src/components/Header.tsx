@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { detect } from "detect-browser";
+import LogoFull from "../images/personal//Logo-full.svg";
+import Logo from "../images/personal//logo.svg";
 
 interface HeaderProps {
   mediaWidth: number;
@@ -23,23 +25,30 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
   const browser = detect();
 
   useEffect(() => {
-    if (browser?.name === 'safari') {
+    if (browser?.name === "safari") {
       setIsSticky(true);
       return;
-    };
-    const observer = new IntersectionObserver((entries) => {
-      const [ entry ] = entries
-      setIsSticky(entry.intersectionRatio < 1)
-    }, {threshold: 1})
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsSticky(entry.intersectionRatio < 1);
+      },
+      { threshold: 1 }
+    );
 
     if (headerRef.current) observer.observe(headerRef.current);
-  }, [headerRef])
+  }, [headerRef]);
 
   return (
-    <header className="header" style={isSticky ? headerIntersectStyle : {}} ref={headerRef}>
+    <header
+      className="header"
+      style={isSticky ? headerIntersectStyle : {}}
+      ref={headerRef}
+    >
       <div className="header__container">
         <div className="header__logo" onClick={() => navigate("/")}>
-          OKOYE CHARLES
+          <img src={mediaWidth > 700 ? LogoFull : Logo} alt="Okoye Charles" />
         </div>
 
         {mediaWidth <= 700 && (

@@ -1,6 +1,6 @@
 import { keyframes } from "@emotion/react";
 import React from "react";
-import { Fade, Reveal, Slide } from "react-awesome-reveal";
+import { Fade, Reveal } from "react-awesome-reveal";
 import aboutCards from "../data/about";
 
 const slideRight = keyframes`
@@ -31,7 +31,7 @@ const AboutGrid: React.FC = () => {
     <div className="aboutGrid">
       <div className="aboutGrid__container">
         {aboutCards.map((card, cardIdx) => (
-          <div className="aboutCard">
+          <div className="aboutCard" key={cardIdx}>
             <Fade triggerOnce fraction={0.5}>
               <div className="aboutCard__image">
                 <img

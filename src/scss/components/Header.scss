@@ -22,6 +22,11 @@
 
 .header__logo {
   cursor: pointer;
+  padding: 0;
+  width: 8em;
+  height: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .header__navToggle {
@@ -91,7 +96,11 @@
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 700.5px) {
+@media screen and (max-width: 700px) {
+  .header__logo {
+    width: 3em;
+  }
+
   .header__container {
     padding: 1em 2em;
     font-size: clamp(1em, 6vw, 1.1em);
