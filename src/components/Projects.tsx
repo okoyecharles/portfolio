@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ProjectGrid from "./ProjectGrid";
-import "../styles/Projects.css";
 import projects from "../data/projects";
 import ProjectPopup from "./ProjectPopup";
 import { Reveal } from "react-awesome-reveal";

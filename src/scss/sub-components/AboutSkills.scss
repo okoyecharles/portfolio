@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .aboutSkills {
   display: flex;
   flex-direction: column;
@@ -10,7 +12,8 @@
   align-items: center;
 }
 
-.aboutLanguages h2, .aboutPerks h2 {
+.aboutLanguages h2,
+.aboutPerks h2 {
   font-size: 1.75em;
   font-weight: 300;
   text-decoration: underline;
@@ -29,7 +32,7 @@
 
 .aboutLanguages__grid li {
   position: relative;
-  background: #111;
+  background: $dark;
   display: flex;
   padding: 1em;
   border-radius: 50%;
@@ -38,7 +41,7 @@
 }
 
 .aboutLanguages__grid li > *:nth-child(1) {
-  color: #ddd;
+  color: darken($light, 10%);
   font-size: 2em;
   transition: 0.35s ease;
 }
@@ -55,12 +58,12 @@
 
 .aboutLanguages__grid li:hover {
   transform: scale(0.95);
-  box-shadow: 0 0 2em lightgray, 0 0 0.25em lightgray;
+  box-shadow: 0 0 2em darken($light, 10%), 0 0 0.25em darken($light, 10%);
 }
 
 .aboutLanguages__grid li:hover > *:nth-child(1) {
-  color: lightgray;
-  filter: drop-shadow(0 0 0.125em lightgray);
+  color: darken($light, 10%);
+  filter: drop-shadow(0 0 0.125em darken($light, 10%));
 }
 
 .aboutLanguages__grid li:hover > *:nth-child(2) {
@@ -85,21 +88,21 @@
   font-weight: 300;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  box-shadow: 0 0 .5em rgba(0, 0, 0, 0.2);
-  transition: .25s ease;
+  box-shadow: 0 0 0.5em transparentize($color: $shadow, $amount: 1- 0.2);
+  transition: 0.25s ease;
 }
 
 .aboutPerks__grid > *:hover {
-  box-shadow: 0 0 .75em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.75em transparentize($color: $shadow, $amount: 1- 0.2);
 }
 
 @media screen and (max-width: 700px) {
-  .aboutLanguages h2, .aboutPerks h2 {
+  .aboutLanguages h2,
+  .aboutPerks h2 {
     font-size: clamp(1.25em, 4vw, 1.5em);
   }
 
-  .aboutLanguages__grid li > *:nth-child(1),
-  .aboutLanguages__grid li > *:nth-child(2) {
+  .aboutLanguages__grid li > *:nth-child(1) {
     font-size: clamp(1em, 3.5vw, 1.25em);
   }
 

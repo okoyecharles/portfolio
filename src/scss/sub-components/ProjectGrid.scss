@@ -1,3 +1,4 @@
+@use "../abstracts" as *;
 
 .projectGrid {
   list-style-type: none;
@@ -8,40 +9,40 @@
   display: flex;
   padding: 1.5em;
   gap: 1.5em;
-  box-shadow: 0 0 1em #000;
+  box-shadow: 0 0 1em $shadow;
 }
 
 /* Customize projectGrid's scrollbar like Mac OS
 Not supported in Firefox and IE */
 .projectGrid::-webkit-scrollbar {
-  background-color: rgb(86, 86, 86);
+  background-color: lighten($color: $dark, $amount: 30%);
   width: 16px;
   height: 16px;
   z-index: 50;
 }
 
 .projectGrid::-webkit-scrollbar-track {
-  background-color: rgba(0,0,0,0);
+  background-color: transparentize($color: $dark, $amount: 1);
 }
 
 .projectGrid::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0);
-  border-radius:16px;
-  border:0px solid rgb(86, 86, 86);
+  background-color: transparentize($color: $dark, $amount: 1);
+  border-radius: 16px;
+  border: 0px solid lighten($color: $dark, $amount: 30%);
 }
 
 .projectGrid::-webkit-scrollbar-button {
-  display:none;
+  display: none;
 }
 
 .projectGrid::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.479);
-  border:4px solid rgb(86, 86, 86);
+  background-color: lighten($color: $dark, $amount: 5%);
+  border: 4px solid lighten($color: $dark, $amount: 30%);
 }
 
 .projectGrid::-webkit-scrollbar-thumb:hover {
-  background-color: #111;
-  border:4px solid rgb(86, 86, 86);
+  background-color: $dark;
+  border: 4px solid lighten($color: $dark, $amount: 30%);
 }
 
 .projectCard {
@@ -52,19 +53,21 @@ Not supported in Firefox and IE */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: .25s ease;
+  transition: 0.25s ease;
   background-size: cover !important;
   background-position: center !important;
 }
 
 .projectCard * {
   background: linear-gradient(
-    0deg, rgba(255, 255, 255, 0.8), 
-    rgba(213, 213, 213, 0.799)
+    0deg,
+    transparentize($color: $light, $amount: 1 - 0.8),
+    transparentize($color: $light, $amount: 1 - 0.6)
   );
   background: -webkit-linear-gradient(
-    0deg, rgba(255, 255, 255, 0.8),
-    rgba(212, 212, 212, 0.799)
+    0deg,
+    transparentize($color: $light, $amount: 1 - 0.8),
+    transparentize($color: $light, $amount: 1 - 0.6)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -74,16 +77,14 @@ Not supported in Firefox and IE */
 .projectCard::after {
   z-index: -1;
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
-  box-shadow:
-  inset 0 24vh 10vh rgba(0, 0, 0, 0.2),
-  inset 0 -24vh 10vh rgba(0, 0, 0, 0.5)
-  ;
+  box-shadow: inset 0 24vh 10vh transparentize($color: $shadow, $amount: 1 - 0.2),
+    inset 0 -24vh 10vh transparentize($color: $shadow, $amount: 1 - 0.6);
   width: 100%;
   height: 100%;
-  transition: .25s ease-in;
+  transition: 0.25s ease-in;
 }
 
 .projectCard__arrow {
@@ -95,7 +96,7 @@ Not supported in Firefox and IE */
   top: 0.5em;
   right: 0.5em;
   opacity: 0;
-  transition: .25s ease-out;
+  transition: 0.25s ease-out;
   cursor: pointer;
 }
 
@@ -116,7 +117,7 @@ Not supported in Firefox and IE */
   text-transform: uppercase;
   opacity: 0;
   transform: translateX(1em);
-  transition: .25s ease-out;
+  transition: 0.25s ease-out;
 }
 
 .projectCard__note {
@@ -125,34 +126,25 @@ Not supported in Firefox and IE */
   font-weight: 300;
   opacity: 0;
   transform: translateX(1em);
-  transition: .25s ease-out;
+  transition: 0.25s ease-out;
 }
 
 .projectCard:is(:hover, :focus-within) .projectCard__arrow {
-  transition:
-    opacity .35s ease-in,
-    transform .45s ease-in
-  ;
+  transition: opacity 0.35s ease-in, transform 0.45s ease-in;
   opacity: 1;
   transform: translateX(0);
 }
 
 .projectCard:is(:hover, :focus-within) .projectCard__title h3 {
-  transition:
-    opacity .35s ease-in,
-    transform .45s ease-out
-  ;
+  transition: opacity 0.35s ease-in, transform 0.45s ease-out;
   transform: translateX(0);
   opacity: 1;
 }
 
 .projectCard:is(:hover, :focus-within) .projectCard__note {
-  transition:
-    opacity .35s  ease-in,
-    transform .45s ease-out
-  ;
+  transition: opacity 0.35s ease-in, transform 0.45s ease-out;
   transform: translateX(0);
-  opacity:  1;
+  opacity: 1;
 }
 
 .projectCard:is(:hover, :focus-within) {
@@ -160,11 +152,9 @@ Not supported in Firefox and IE */
 }
 
 .projectCard:is(:hover, :focus-within)::after {
-  box-shadow:
-  inset 0 30vh 10vh rgba(0, 0, 0, 0.8),
-  inset 0 -20vh 10vh rgba(0, 0, 0, 0.7),
-  0 0 0 0.1em rgba(255, 255, 255, 0.498)
-  ;
+  box-shadow: inset 0 30vh 10vh transparentize($color: $shadow, $amount: 1 - 0.8),
+    inset 0 -20vh 10vh transparentize($color: $shadow, $amount: 1 - 0.7),
+    0 0 0 0.1em transparentize($color: $light, $amount: 1 - 0.5);
   backdrop-filter: blur(2px);
 }
 
@@ -182,9 +172,9 @@ Not supported in Firefox and IE */
   .projectCard {
     height: unset;
     aspect-ratio: auto;
-    background: #111;
+    background: $dark;
     transition: none;
-    box-shadow: 0 0 0.5em #000;
+    box-shadow: 0 0 0.5em $shadow;
     border-radius: 0.25em;
     overflow: hidden;
   }
@@ -192,7 +182,7 @@ Not supported in Firefox and IE */
   .projectCard:hover {
     transform: scale(1);
   }
-  
+
   .projectCard::after {
     display: none;
   }
@@ -216,8 +206,9 @@ Not supported in Firefox and IE */
   .projectCard__title {
     padding: 0.5em;
   }
-  
-  .projectCard__title h3, .projectCard__arrow :first-child {
+
+  .projectCard__title h3,
+  .projectCard__arrow :first-child {
     font-size: clamp(1em, 5vw, 1.75em);
   }
 

@@ -4,7 +4,6 @@ import { ImLink } from "react-icons/im";
 import { FiGithub } from "react-icons/fi";
 import { CgArrowTopRightR } from "react-icons/cg";
 import projects from "../data/projects";
-import "../styles/ProjectPopup.css";
 
 interface ProjectPopupProps {
   index: number;

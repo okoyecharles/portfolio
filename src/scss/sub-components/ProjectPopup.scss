@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .projectPopup {
   z-index: 200;
   position: fixed;
@@ -31,7 +33,7 @@
   content: '';
   position: absolute;
   height: 0%;
-  width: 50%;
+  width: 51%;
   z-index: -1;
   transition: 0.25s ease-in;
 }
@@ -39,13 +41,13 @@
 .projectPopup::before {
   top: 0;
   left: 0;
-  background: #222;
+  background: lighten($color: $dark, $amount: 5%);
 }
 
 .projectPopup::after {
   bottom: 0;
   right: 0;
-  background: #222;
+  background: lighten($color: $dark, $amount: 5%);
 }
 
 .projectPopup.active {
@@ -71,15 +73,15 @@
 
 .projectPopup__close :nth-child(1) {
   font-size: 2em;
-  box-shadow: 0 0 0 0.05em #fff;
+  box-shadow: 0 0 0 0.05em $light;
   cursor: pointer;
   transition: .1s ease-out;
 }
 
 .projectPopup__close:hover :nth-child(1) {
-  box-shadow: 0 0 0 0.05em #111;
-  background: #fff;
-  color: #111;
+  box-shadow: 0 0 0 0.05em $dark;
+  background: $light;
+  color: $dark;
 }
 
 .projectPopup__content {
@@ -97,12 +99,12 @@
   align-items: center;
   gap: 0.25em;
   background: linear-gradient(
-    0deg, rgba(255, 255, 255, 0.9), 
-    rgba(213, 213, 213, 0.6)
+    0deg, transparentize($light, 1 - 0.9),
+    transparentize($light, 1 - 0.6)
   );
   background: -webkit-linear-gradient(
-    0deg, rgba(255, 255, 255, 0.9), 
-    rgba(213, 213, 213, 0.6)
+    0deg, transparentize($light, 1 - 0.9),
+    transparentize($light, 1 - 0.5)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -129,7 +131,7 @@
 }
 
 .projectPopup__stack > span {
-  background: rgba(255, 255, 255, 0.25);
+  background: transparentize($light, 1 - 0.25);
   padding: 0.25em 0.75em;
   border-radius: 0.25em;
   margin-right: 0.5em;
@@ -138,7 +140,7 @@
 }
 
 .projectPopup__stack > span:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: transparentize($light, 1 - 0.35);
 }
 
 .projectPopup__description {
@@ -157,7 +159,7 @@
   border-radius: 0.25em;
   height: 100%;
   margin-inline: auto;
-  box-shadow: 0 0 1.25em #000;
+  box-shadow: 0 0 1.25em $shadow;
   opacity: 0;
 }
 
@@ -178,7 +180,7 @@
 .projectPopup__links button {
   position: relative;
   padding-block: 1.75em;
-  border: 0.075em solid #fff;
+  border: 0.075em solid $light;
   padding: 0.5em 2em;
   cursor: pointer;
   font-weight: 300;
@@ -192,12 +194,12 @@
 }
 
 .projectPopup__links button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  color: #111;
+  background-color: $light;
+  color: $dark;
 }
 
 .projectPopup__links button:hover * {
-  color: #111;
+  color: $dark;
 }
 
 .projectPopup.active .projectPopup__close {

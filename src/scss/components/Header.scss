@@ -1,5 +1,7 @@
+@use "../abstracts" as *;
+
 .header {
-  background: rgba(255, 255, 255, 0.9);
+  background: transparentize($light, 0.1);
   backdrop-filter: blur(5px);
   z-index: 100;
 }
@@ -15,7 +17,7 @@
 }
 
 .header__container * {
-  color: #111;
+  color: $dark;
 }
 
 .header__logo {
@@ -45,61 +47,49 @@
   text-decoration: none;
   text-transform: uppercase;
   isolation: isolate;
-  color: #555;
+  color: lighten($dark, 20%);
 }
 
 .header__navLinks a:hover {
-  color: #000;
+  color: darken($dark, 50%);
 }
 
 .header__navLinks a::after,
 .header__navLinks a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 0.2em;
   bottom: -0.35em;
   transform: scaleX(0);
   transform-origin: left;
-  
 }
 
 .header__navLinks a::after {
-  transition: 
-    transform .05s ease
-  ;
+  transition: transform 0.05s ease;
   left: 0;
-  background: #00000080;
+  background: transparentize($color: $dark, $amount: 0.5);
   z-index: -1;
-  transition:
-    transform .25s .1s ease-out
-  ;
+  transition: transform 0.25s 0.1s ease-out;
 }
 
 .header__navLinks a::before {
-  transition:
-    transform .5s ease-out
-  ;
+  transition: transform 0.5s ease-out;
   right: 0;
-  background: #111;
+  background: $dark;
 }
 
 .header__navLinks a:hover::before {
-  transition:
-    transform .25s .15s ease-out
-  ;
+  transition: transform 0.25s 0.15s ease-out;
   transform-origin: left;
   transform: scaleX(1);
 }
 
 .header__navLinks a:hover::after {
-  transition:
-    transform .25s ease-out
-  ;
+  transition: transform 0.25s ease-out;
   transform-origin: left;
   transform: scaleX(1);
 }
-
 
 @media screen and (max-width: 700.5px) {
   .header__container {
@@ -109,7 +99,7 @@
 
   .header__nav {
     position: absolute;
-    background: black;
+    background: darken($color: $dark, $amount: 10%);
     padding: 1em 2em 3em;
     z-index: 100;
     top: 0;
@@ -121,24 +111,18 @@
     opacity: 0;
     pointer-events: none;
 
-    transition:
-      opacity .1s .25s ease,
-      transform .5s cubic-bezier(1, 0, 0, 1)
-    ;
+    transition: opacity 0.1s 0.25s ease, transform 0.5s cubic-bezier(1, 0, 0, 1);
   }
 
   .header__nav.active {
-    transition:
-      opacity .25s ease,
-      transform .25s cubic-bezier(1, 0, 0, 1)
-    ;
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(1, 0, 0, 1);
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
   }
 
   .header__nav * {
-    color: #fff !important;
+    color: $light !important;
   }
 
   .header__navLinks {

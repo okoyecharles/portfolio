@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .aboutGrid__container {
   display: grid;
 }
@@ -11,11 +13,11 @@
 }
 
 .aboutCard::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: $dark;
   width: 100%;
   height: 0.025em;
   transform: scale(0.5);
@@ -38,12 +40,12 @@
   isolation: isolate;
 }
 .aboutCard__image img {
-transition: .25s ease;
+  transition: 0.25s ease;
 }
 .aboutCard__image::before,
 .aboutCard__image::after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,12 +65,12 @@ transition: .25s ease;
 
 .aboutCard:nth-child(even) .aboutCard__image::after,
 .aboutCard:nth-child(odd) .aboutCard__image::before {
-  box-shadow: inset 0 0 0 0.05em;
+  box-shadow: inset 0 0 0 0.05em $dark;
 }
 
 .aboutCard:nth-child(even) .aboutCard__image::before,
 .aboutCard:nth-child(odd) .aboutCard__image::after {
-  background: #222;
+  background: lighten($color: $dark, $amount: 5%);
 }
 
 .aboutCard:hover .aboutCard__image::after {
@@ -90,11 +92,11 @@ transition: .25s ease;
 }
 
 .aboutCard__title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0.5rem;
   left: 0;
-  background-color: black;
+  background-color: $dark;
   width: 0;
   height: 0.05em;
   transform-origin: left;
@@ -125,7 +127,7 @@ transition: .25s ease;
     flex-direction: column-reverse !important;
     gap: 0;
     padding: 1em;
-    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.75em transparentize($color: $shadow, $amount: 1 - 0.1);
     border-radius: 0.25em;
   }
 

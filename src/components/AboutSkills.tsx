@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/AboutSkills.css";
 import {
   SiHtml5,
   SiCss3,
@@ -50,7 +49,7 @@ const AboutSkills: React.FC = () => {
             </li>
             <li>
               <SiJavascript />
-              <span>JAVASCRIPT</span>
+              <span>JavaScript</span>
             </li>
             <li>
               <SiReact />

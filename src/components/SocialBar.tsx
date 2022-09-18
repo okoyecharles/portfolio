@@ -1,8 +1,6 @@
 import React from "react";
-import "../styles/SocialBar.css";
 import { FaAngellist, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 const slideIn = keyframes`

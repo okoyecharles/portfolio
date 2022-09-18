@@ -1,6 +1,9 @@
+@use "../abstracts" as *;
+
 .socialBar {
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.05), 0 0 0 .05em rgba(0, 0, 0, 0.1);
+  background: transparentize($color: $light, $amount: 0.5);
+  box-shadow: 0 0 1em transparentize($color: $shadow, $amount: 0.95),
+    0 0 0 0.05em transparentize($color: $shadow, $amount: 0.9);
 
   position: fixed;
   transform: translateY(-50%);
@@ -24,7 +27,7 @@
 .socialBar__links li a {
   isolation: isolate;
   position: relative;
-  color: #111;
+  color: $dark;
 }
 
 .socialBar__links li a > :nth-child(1) {
@@ -35,7 +38,7 @@
   z-index: -1;
   pointer-events: none;
   background-color: transparent;
-  padding: .1em .5em;
+  padding: 0.1em 0.5em;
   border-radius: 1.25em;
   width: 100%;
   text-align: center;
@@ -44,7 +47,7 @@
   top: -25%;
   left: 0;
 
-  transition: .2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .socialBar__links li a > div > span {
@@ -54,31 +57,22 @@
 }
 
 .socialBar__links li a:hover > :nth-child(1) {
-  transition:
-    transform .25s ease,
-    opacity .2s ease
-  ;
+  transition: transform 0.25s ease, opacity 0.2s ease;
   transform: rotateX(90deg);
   opacity: 0;
 }
 
 .socialBar__links li a:hover div {
-  transition:
-  width .5s ease,
-  backkground-color .5s ease-in
-  ;
+  transition: width 0.5s ease, background-color 0.5s ease-in;
   pointer-events: all;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparentize($color: $light, $amount: 0.5);
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 0 .05em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 0.05em transparentize($color: $shadow, $amount: 0.9);
   width: 440%;
 }
 
 .socialBar__links li a:hover div span {
-  transition:
-    margin-left .5s .1s ease,
-    opacity .25s .2s ease-in
-  ;
+  transition: margin-left 0.5s 0.1s ease, opacity 0.25s 0.2s ease-in;
   margin-left: 0;
   opacity: 1;
 }

@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .home {
   display: flex;
   align-items: flex-end;
@@ -12,25 +14,21 @@
   gap: -2em;
 }
 
-/* .home, .home * {
-  box-shadow: 0 0 0 .1em red;
-} */
-
 .home__content {
-  grid-column: 1/span 3;
+  grid-column: 1 / span 3;
   grid-row: 1;
 }
 
 .home__header {
   font-size: clamp(3em, 7.25vw, 6.25em);
   font-weight: 900;
-  color: #111;
+  color: $dark;
   margin-top: min(2vw, 2rem);
 }
 
 .home__description {
   width: 75%;
-  margin-top: .5em;
+  margin-top: 0.5em;
   font-size: 1.25em;
   font-weight: 300;
 }
@@ -38,24 +36,24 @@
 .home__button {
   position: relative;
   margin-block: 1.75em;
-  border: 0.075em solid #111;
+  border: 0.075em solid $dark;
   padding: 0.5em 2em;
   cursor: pointer;
   font-weight: 300;
   overflow: hidden;
-  background: #f0f0f0;
-  transition: .1s ease;
+  background: darken($color: $light, $amount: 5%);
+  transition: 0.1s ease;
 }
 
 .home__button:is(:hover, :focus-within) {
-  background: #222;
-  color: rgba(255, 255, 255, 0.789);
-  box-shadow: 0 0 .5em rgba(0, 0, 0, 0.3);
+  background: lighten($color: $dark, $amount: 5%);
+  color: transparentize($color: $light, $amount: 0.2);
+  box-shadow: 0 0 0.5em transparentize($color: $shadow, $amount: 0.7);
 }
 
 .home__image {
   position: relative;
-  grid-column: 3/span 3;
+  grid-column: 3 / span 3;
   grid-row: 1;
   display: flex;
   justify-content: flex-end;
@@ -69,7 +67,7 @@
 }
 
 .home__image::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -96,11 +94,8 @@
   }
 
   .home__header {
-    font-size: clamp(1.5em,7vw, 2.5em);
+    font-size: clamp(1.5em, 7vw, 2.5em);
   }
-  /* .home__content > * {
-  box-shadow: 0 0 0 .1em red;
-  } */
 
   .home__description {
     width: 100%;
@@ -112,7 +107,7 @@
     margin-block: 1.75em;
     align-self: center;
   }
-  
+
   .home__button {
     margin: 0;
     justify-self: center;
@@ -121,7 +116,6 @@
 
   .home__image {
     justify-content: center;
-    
   }
   .home__image img {
     margin-inline: auto;

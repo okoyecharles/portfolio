@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
-import "../styles/Header.css";
 import { detect } from "detect-browser";
 
 interface HeaderProps {

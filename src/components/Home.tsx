@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "../styles/Home.css";
+import React from "react";
 import OkoyeCharles from "../images/personal/OkoyeCharles.png";
 import OkoyeCharlesSm from "../images/personal/OkoyeCharles-sm.png";
 import { Reveal } from "react-awesome-reveal";

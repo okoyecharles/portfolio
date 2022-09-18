@@ -2,7 +2,6 @@ import { keyframes } from "@emotion/react";
 import React from "react";
 import { Fade, Reveal, Slide } from "react-awesome-reveal";
 import aboutCards from "../data/about";
-import "../styles/AboutGrid.css";
 
 const slideRight = keyframes`
   from {

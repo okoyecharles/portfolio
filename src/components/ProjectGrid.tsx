@@ -1,9 +1,7 @@
 import React from "react";
-import "../styles/ProjectGrid.css";
 import { Project } from "../data/projects";
 import { IoIosArrowForward } from "react-icons/io";
 import { Fade } from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
 
 interface ProjectGridProps {
   projects: Project[];

@@ -1,7 +1,6 @@
 import { keyframes } from "@emotion/react";
 import React from "react";
 import { Reveal } from "react-awesome-reveal";
-import "../styles/About.css";
 import AboutGrid from "./AboutGrid";
 import AboutSkills from "./AboutSkills";
 
