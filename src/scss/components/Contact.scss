@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.contact {
+  background: $dark;
+}
+
+.contact * {
+  color: $light;
+}
+
+.contact__container {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: 1em 1.8em 5em 4.5em;
+}
+
+.contact__header {
+  width: fit-content;
+  font-size: 1.5em;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.contact__header::after {
+  position: absolute;
+  content: "";
+  bottom: -0.25em;
+  left: 0.5rem;
+  width: 100%;
+  height: 0.75em;
+  background: transparentize($color: $light, $amount: 1 - 0.125);
+}
+
+.contact__content {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-block: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__coa {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 1.375em;
+  font-weight: 300;
+  color: transparentize($color: $light, $amount: 1 - 0.75);
+}
+
+.contact__coa strong {
+  color: transparentize($color: $light, $amount: 1 - 0.9);
+}

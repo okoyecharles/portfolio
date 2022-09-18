@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Routes } from "react-router-dom";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
@@ -22,6 +22,7 @@ const App: React.FC = () => {
       <Home mediaWidth={mediaWidth} />
       <Projects mediaWidth={mediaWidth} />
       <About />
+      <Contact />
     </main>
   );
 };
