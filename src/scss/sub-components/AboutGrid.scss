@@ -41,6 +41,8 @@
 }
 .aboutCard__image img {
   transition: 0.25s ease;
+  height: auto;
+  width: auto;
 }
 .aboutCard__image::before,
 .aboutCard__image::after {
@@ -127,8 +129,10 @@
     flex-direction: column-reverse !important;
     gap: 0;
     padding: 1em;
-    box-shadow: 0 0 0.75em transparentize($color: $shadow, $amount: 1 - 0.1);
+    box-shadow: 0 0 0.75em transparentize($color: $shadow, $amount: 1 - 0.1),
+      inset 0 0 0 0.05em transparentize($color: $theme, $amount: 1 - 0.25);
     border-radius: 0.25em;
+    overflow: hidden;
   }
 
   .aboutCard > * {

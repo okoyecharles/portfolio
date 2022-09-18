@@ -34,13 +34,29 @@ const AboutGrid: React.FC = () => {
           <div className="aboutCard">
             <Fade triggerOnce fraction={0.5}>
               <div className="aboutCard__image">
-                <img src={card.image} alt={card.title} />
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  width={card.imgDims.width}
+                  height={card.imgDims.height}
+                />
               </div>
             </Fade>
             <div className="aboutCard__content">
-              <Reveal triggerOnce damping={0.125} fraction={1} cascade keyframes={cardIdx % 2 === 0 ? slideLeft: slideRight}>
+              <Reveal
+                triggerOnce
+                damping={0.125}
+                fraction={1}
+                cascade
+                keyframes={cardIdx % 2 === 0 ? slideLeft : slideRight}
+              >
                 <h3 className="aboutCard__title">{card.title}</h3>
-                <div className="aboutCard__description" dangerouslySetInnerHTML={{__html: card.description}}>{}</div>
+                <div
+                  className="aboutCard__description"
+                  dangerouslySetInnerHTML={{ __html: card.description }}
+                >
+                  {}
+                </div>
               </Reveal>
             </div>
           </div>
