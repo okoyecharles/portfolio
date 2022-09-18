@@ -57,4 +57,8 @@
   .contact__container {
     padding: 1.8em;
   }
+
+  .contact__coa {
+    font-size: clamp(1em, 3.5vw, 1.25em);
+  }
 }

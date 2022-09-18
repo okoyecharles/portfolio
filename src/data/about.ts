@@ -1,5 +1,5 @@
-import Experience from '../images/about/exp.jpg';
-import Paint from '../images/about/hobbies.jpg';
+import Experience from '../images/about/exp.webp';
+import Paint from '../images/about/hobbies.webp';
 
 export interface About {
   title: string;

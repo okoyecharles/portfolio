@@ -1,6 +1,6 @@
 import React from "react";
-import OkoyeCharles from "../images/personal/OkoyeCharles.png";
-import OkoyeCharlesSm from "../images/personal/OkoyeCharles-sm.png";
+import OkoyeCharles from "../images/personal/OkoyeCharles.webp";
+import OkoyeCharlesSm from "../images/personal/OkoyeCharles-sm.webp";
 import { Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 

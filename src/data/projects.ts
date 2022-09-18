@@ -1,7 +1,7 @@
-import AmazonClone from '../images/projects/amazon-clone.png';
-import LavishCuisine from '../images/projects/lavish-cuisine.png';
-import Nethub from '../images/projects/nethub.png';
-import SaveAChild from '../images/projects/save-a-child.png';
+import AmazonClone from '../images/projects/amazon-clone.webp';
+import LavishCuisine from '../images/projects/lavish-cuisine.webp';
+import Nethub from '../images/projects/nethub.webp';
+import SaveAChild from '../images/projects/save-a-child.webp';
 
 export interface Project {
   index: number,
