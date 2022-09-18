@@ -38,6 +38,7 @@ const ProjectPopup: React.FC<ProjectPopupProps> = ({
               href={project.links.live}
               target="_blank"
               rel="noreferrer-noopener"
+              aria-label="Move to live website"
             >
               <ImLink />
             </a>

@@ -27,7 +27,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
           >
             {mediaWidth <= 700 && (
               <div className="projectCard__image">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title} width={project.imgDims.width} height={project.imgDims.height}/>
               </div>
             )}
             <div className="projectCard__title">
@@ -37,6 +37,8 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
                 onClick={() => {
                   togglePopup(projectIdx, true);
                 }}
+                role="button"
+                aria-label="Open Project"
               >
                 <IoIosArrowForward />
               </button>
