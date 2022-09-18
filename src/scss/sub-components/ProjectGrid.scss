@@ -194,6 +194,7 @@ Not supported in Firefox and IE */
   .projectCard__image img {
     object-fit: contain;
     opacity: 0.9;
+    height: auto;
   }
 
   .projectCard__title h3,

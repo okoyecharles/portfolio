@@ -59,10 +59,13 @@
   justify-content: flex-end;
   align-items: flex-end;
   user-select: none;
+  height: 0;
+  padding-top: 100%;
 }
 
 .home__image img {
   width: 95%;
+  height: 100%;
   margin-left: auto;
 }
 
@@ -116,6 +119,8 @@
 
   .home__image {
     justify-content: center;
+    height: unset;
+    padding-top: 0;
   }
   .home__image img {
     margin-inline: auto;

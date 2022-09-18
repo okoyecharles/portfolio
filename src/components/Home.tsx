@@ -68,13 +68,18 @@ const Home: React.FC<HomeProps> = ({ mediaWidth }) => {
             <Reveal triggerOnce keyframes={slideInL} damping={0.25}>
               <img
                 src={OkoyeCharles}
+                width="2960"
+                height="2960"
                 alt="Okoye Charles"
               />
             </Reveal>
           </div>
         ) : (
           <div className="home__image">
-            <img src={OkoyeCharlesSm} alt="Okoye Charles" />
+            <img src={OkoyeCharlesSm} 
+            width="800"
+            height="800"
+            alt="Okoye Charles" />
           </div>
         )}
       </div>
