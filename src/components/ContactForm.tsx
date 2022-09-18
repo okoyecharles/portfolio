@@ -3,24 +3,30 @@ import { TextField } from "@mui/material";
 
 // Styles to be applied to material ui provided text field
 const rootTextFieldStyles = {
-  '& .MuiInputLabel-root': {
-    color: 'rgba(255, 255, 255, 0.75) !important',
+  '& .MuiInputLabel-root:not(.Mui-focused)': {
+    color: '#f7f9fa !important',
+  },
+  '& .MuiInuptLabel-root.Mui-focused': {
+    color: 'rgba(0, 113, 183, 0.75) !important',
+  },
+  '.MuiFormLabel-asterisk': {
+    color: 'rgba(0, 113, 183, 0.75)'
   },
   '& .MuiInputBase-input': {
-    color: 'rgba(255, 255, 255, 0.75)',
+    color: '#f7f9fa',
     background: 'transparent',
   },
   '& .MuiInputBase-input:-webkit-autofill, & .MuiInputBase-input:-webkit-autofill:focus': {
     transition: 'background-color 600000s 0s, color 600000s 0s',
   },
   '& .MuiOutlinedInput-notchedOutline': {
-    borderColor: 'rgba(255, 255, 255, 0.75)',
+    borderColor: 'rgba(247, 249, 250, 0.525)',
   },
   '& .MuiInputBase-root:hover > fieldset.MuiOutlinedInput-notchedOutline': {
-    borderColor: 'rgba(255, 255, 255, 0.65)',
+    borderColor: 'rgba(247, 249, 250, 0.75)',
   },
   '& :is(.MuiInputBase-input, textarea):focus ~ fieldset.MuiOutlinedInput-notchedOutline': {
-    borderColor: 'rgba(255, 255, 255, 0.75)',
+    borderColor: 'rgba(0, 113, 183, 0.75)',
   },
 }
 

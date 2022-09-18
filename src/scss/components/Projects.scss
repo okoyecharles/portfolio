@@ -29,7 +29,7 @@
   left: 0.5rem;
   width: 100%;
   height: 0.75em;
-  background: transparentize($color: $light, $amount: 1 - 0.125);
+  background: transparentize($color: $theme, $amount: 1 - 0.25);
 }
 
 .projects__coa {

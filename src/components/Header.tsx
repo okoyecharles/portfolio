@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const headerIntersectStyle: React.CSSProperties = {
-  boxShadow: "0 0 0.25em rgba(0, 0, 0, 0.3)",
+  boxShadow: "0 0 0.25em rgba(0, 45, 72, 0.3)",
   position: "sticky",
   top: "-0.01px",
 };

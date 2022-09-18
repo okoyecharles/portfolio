@@ -1,9 +1,9 @@
 @use "../abstracts" as *;
 
 .socialBar {
-  background: transparentize($color: $light, $amount: 0.5);
-  box-shadow: 0 0 1em transparentize($color: $shadow, $amount: 0.95),
-    0 0 0 0.05em transparentize($color: $shadow, $amount: 0.9);
+  background: transparentize($color: $light, $amount: 0.35);
+  box-shadow: 0 0 1em transparentize($color: $dark, $amount: 0.95),
+    0 0 0 0.05em transparentize($color: darken($theme, 15%), $amount: 0.85);
 
   position: fixed;
   transform: translateY(-50%);
@@ -67,7 +67,7 @@
   pointer-events: all;
   background-color: transparentize($color: $light, $amount: 0.5);
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 0 0.05em transparentize($color: $shadow, $amount: 0.9);
+  box-shadow: 0 0 0 0.05em transparentize($color: darken($theme, 15%), $amount: 0.85);
   width: 440%;
 }
 

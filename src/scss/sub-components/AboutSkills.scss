@@ -50,7 +50,7 @@
   position: absolute;
   bottom: -1.5em;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   text-transform: uppercase;
   opacity: 0;
   transition: 0.25s ease;
@@ -58,16 +58,17 @@
 
 .aboutLanguages__grid li:hover {
   transform: scale(0.95);
-  box-shadow: 0 0 2em darken($light, 10%), 0 0 0.25em darken($light, 10%);
+  box-shadow: 0 0 1.5em 0.25em lighten($color: $light, $amount: 10%), 0 0 1.5em lighten($color: $theme, $amount: 5%), inset 0 0 0.5em black;
 }
 
 .aboutLanguages__grid li:hover > *:nth-child(1) {
-  color: darken($light, 10%);
-  filter: drop-shadow(0 0 0.125em darken($light, 10%));
+  color: lighten($color: $theme, $amount: 5%);
+  filter: drop-shadow(0 0 0.125em transparentize($color: $theme, $amount: 0.5));
 }
 
 .aboutLanguages__grid li:hover > *:nth-child(2) {
   opacity: 1;
+  transform: translate(-50%, 25%);
 }
 
 .aboutPerks h2 {
@@ -93,7 +94,7 @@
 }
 
 .aboutPerks__grid > *:hover {
-  box-shadow: 0 0 0.75em transparentize($color: $shadow, $amount: 1- 0.2);
+  box-shadow: 0 0 0.75em transparentize($color: darken($theme, 25%), $amount: 1- 0.2);
 }
 
 @media screen and (max-width: 700px) {

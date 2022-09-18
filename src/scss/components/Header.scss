@@ -68,7 +68,7 @@
 .header__navLinks a::after {
   transition: transform 0.05s ease;
   left: 0;
-  background: transparentize($color: $dark, $amount: 0.5);
+  background: transparentize($color: $theme, $amount: 0.75);
   z-index: -1;
   transition: transform 0.25s 0.1s ease-out;
 }
@@ -99,7 +99,7 @@
 
   .header__nav {
     position: absolute;
-    background: darken($color: $dark, $amount: 10%);
+    background: $dark;
     padding: 1em 2em 3em;
     z-index: 100;
     top: 0;

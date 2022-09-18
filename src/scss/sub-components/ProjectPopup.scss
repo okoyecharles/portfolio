@@ -41,13 +41,13 @@
 .projectPopup::before {
   top: 0;
   left: 0;
-  background: lighten($color: $dark, $amount: 5%);
+  background: lighten($color: $dark, $amount: 1.25%);
 }
 
 .projectPopup::after {
   bottom: 0;
   right: 0;
-  background: lighten($color: $dark, $amount: 5%);
+  background: lighten($color: $dark, $amount: 1.25%);
 }
 
 .projectPopup.active {
@@ -80,7 +80,7 @@
 
 .projectPopup__close:hover :nth-child(1) {
   box-shadow: 0 0 0 0.05em $dark;
-  background: $light;
+  background: $theme;
   color: $dark;
 }
 
@@ -98,12 +98,12 @@
   display: flex;
   align-items: center;
   gap: 0.25em;
-  background: linear-gradient(
-    0deg, transparentize($light, 1 - 0.9),
-    transparentize($light, 1 - 0.6)
-  );
   background: -webkit-linear-gradient(
-    0deg, transparentize($light, 1 - 0.9),
+    0deg, transparentize($light, 1 - 0.8),
+    transparentize($light, 1 - 0.5)
+  );
+  background: linear-gradient(
+    0deg, transparentize($light, 1 - 0.8),
     transparentize($light, 1 - 0.5)
   );
   background-clip: text;
@@ -131,16 +131,26 @@
 }
 
 .projectPopup__stack > span {
-  background: transparentize($light, 1 - 0.25);
+  background:
+    linear-gradient(
+      transparentize($light, 1 - 0.10),
+      transparentize($light, 1 - 0.15)
+    )
+  ;
   padding: 0.25em 0.75em;
   border-radius: 0.25em;
   margin-right: 0.5em;
-  transition: .05s ease;
+  transition: .15s ease;
   cursor: pointer;
 }
 
 .projectPopup__stack > span:hover {
-  background: transparentize($light, 1 - 0.35);
+  background: 
+  linear-gradient(
+    transparentize($light, 1 - 0.25),
+    transparentize($light, 1 - 0.25)
+  )
+  ;
 }
 
 .projectPopup__description {
@@ -194,7 +204,7 @@
 }
 
 .projectPopup__links button:hover {
-  background-color: $light;
+  background-color: transparentize($color: $light, $amount: 0.125);
   color: $dark;
 }
 

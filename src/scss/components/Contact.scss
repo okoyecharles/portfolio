@@ -29,7 +29,7 @@
   left: 0.5rem;
   width: 100%;
   height: 0.75em;
-  background: transparentize($color: $light, $amount: 1 - 0.125);
+  background: transparentize($color: $theme, $amount: 1 - 0.25);
 }
 
 .contact__content {
@@ -51,4 +51,10 @@
 
 .contact__coa strong {
   color: transparentize($color: $light, $amount: 1 - 0.9);
+}
+
+@media screen and (max-width: 700px) {
+  .contact__container {
+    padding: 1.8em;
+  }
 }
