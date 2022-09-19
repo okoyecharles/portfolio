@@ -18,6 +18,7 @@ const slideUp = keyframes`
 const Contact: React.FC = () => {
   return (
     <section className="contact">
+      <a id="contact"></a>
       <div className="contact__container">
         <h2 className="contact__header">Contact</h2>
         <div className="contact__content">

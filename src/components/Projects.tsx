@@ -31,6 +31,7 @@ const Projects: React.FC<ProjectsProps> = ({ mediaWidth }) => {
 
   return (
     <section className="projects">
+      <a id="projects"></a>
       <div className="projects__container">
         <h2 className="projects__header">Projects</h2>
         <Reveal triggerOnce fraction={1} delay={100} keyframes={slideUp}>

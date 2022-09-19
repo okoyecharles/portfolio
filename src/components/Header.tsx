@@ -4,6 +4,7 @@ import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { detect } from "detect-browser";
 import LogoFull from "../images/personal//Logo-full.svg";
 import Logo from "../images/personal//logo.svg";
+import { Fade } from "react-awesome-reveal";
 
 interface HeaderProps {
   mediaWidth: number;
@@ -23,6 +24,13 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
 
   const browser = detect();
+
+  const scrollToTop = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    setMobileVavActive(false);
+  }
 
   useEffect(() => {
     if (browser?.name === "safari") {
@@ -48,7 +56,9 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
     >
       <div className="header__container">
         <div className="header__logo" onClick={() => navigate("/")}>
-          <img src={mediaWidth > 700 ? LogoFull : Logo} alt="Okoye Charles" />
+          <Fade triggerOnce>
+            <img src={mediaWidth > 700 ? LogoFull : Logo} alt="Okoye Charles" />
+          </Fade>
         </div>
 
         {mediaWidth <= 700 && (
@@ -74,16 +84,16 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
           )}
           <ul className="header__navLinks">
             <li>
-              <a href="#HOME">Home</a>
+              <a href="" onClick={scrollToTop}>Home</a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#projects" onClick={() => {setMobileVavActive(false)}}>Projects</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about" onClick={() => {setMobileVavActive(false)}}>About</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact" onClick={() => {setMobileVavActive(false)}}>Contact</a>
             </li>
           </ul>
         </nav>

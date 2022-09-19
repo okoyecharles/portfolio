@@ -18,6 +18,7 @@ const slideUp = keyframes`
 const About: React.FC = () => {
   return (
     <section className="about">
+      <a id="about"></a>
       <div className="about__container">
         <h2 className="about__header">About</h2>
         <div className="about__coa">

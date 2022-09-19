@@ -6,8 +6,11 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import SocialBar from "./components/SocialBar";
 
+const navHeight = document.querySelector('.header')?.getBoundingClientRect();
+
+
 const App: React.FC = () => {
-  const [mediaWidth, setMediaWidth] = useState<number>(0);
+  const [mediaWidth, setMediaWidth] = useState<number>(1000);
   useEffect(() => {
     setMediaWidth(window.innerWidth);
   }, []);
@@ -15,6 +18,12 @@ const App: React.FC = () => {
     const window = e?.target as Window;
     setMediaWidth(window.innerWidth);
   });
+
+  useEffect(() => {
+    const navHeight = document.querySelector('.header')?.getBoundingClientRect();
+    document.documentElement.style.setProperty('--scroll-padding', navHeight?.height + 'px');
+    document.body.style.setProperty('--scroll-padding', navHeight?.height + 'px');
+  }, [])
   return (
     <main className="App">
       <Header mediaWidth={mediaWidth} />
