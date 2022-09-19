@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+}
+
+.contactForm button {
+  align-self: center;
+  border: 0.075em solid $light;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  font-weight: 300;
+  width: max-content;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: space-around;
+  transition: .1s ease;
+}
+
+.contactForm button:is(:hover, :focus-within) {
+  background-color: $light;
+  color: $dark;
+}

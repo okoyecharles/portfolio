@@ -1,0 +1,148 @@
+@use "../abstracts" as *;
+
+.home {
+  display: flex;
+  align-items: flex-end;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+.home__container {
+  padding: 5em 1.8em 0 4.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: -2em;
+}
+
+.home__content {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.home__header {
+  font-size: clamp(3em, 7.25vw, 6.25em);
+  font-weight: 900;
+  color: $dark;
+  margin-top: min(2vw, 2rem);
+}
+
+.home__description {
+  width: 75%;
+  margin-top: 0.5em;
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+.home__button {
+  position: relative;
+  margin-block: 1.75em;
+  border: 0.075em solid $dark;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  font-weight: 300;
+  overflow: hidden;
+  background: darken($color: $light, $amount: 5%);
+  transition: 0.1s ease;
+}
+
+.home__button:is(:hover, :focus-within) {
+  background: lighten($color: $dark, $amount: 5%);
+  color: transparentize($color: $light, $amount: 0.2);
+  box-shadow: 0 0 0.5em transparentize($color: $shadow, $amount: 0.7);
+}
+
+.home__image {
+  position: relative;
+  grid-column: 3 / span 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  user-select: none;
+  height: 0;
+  padding-top: 100%;
+}
+
+.home__image img {
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+}
+
+.home__image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    min-height: 0;
+    padding-top: 1.5em;
+    z-index: -1;
+  }
+
+  .home__container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+
+  .home__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home__header {
+    font-size: clamp(1.5em, 7vw, 2.5em);
+  }
+
+  .home__description {
+    width: 100%;
+    font-size: clamp(1em, 3vw, 1.25em);
+  }
+
+  .home__content a {
+    width: fit-content;
+    margin-block: 1.75em;
+    align-self: center;
+  }
+
+  .home__button {
+    margin: 0;
+    justify-self: center;
+    z-index: 0;
+  }
+
+  .home__image {
+    justify-content: center;
+    height: unset;
+    padding-top: 0;
+  }
+  .home__image img {
+    margin-inline: auto;
+    width: 50%;
+    min-width: 12.5em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home__container {
+    padding: 0 1.8em 0 1.8em;
+  }
+
+  .home__button {
+    z-index: -1;
+  }
+
+  .home__description {
+    text-align: center;
+  }
+
+  .home__image {
+    z-index: -1;
+  }
+}

@@ -1,0 +1,142 @@
+@use "../abstracts" as *;
+
+.header {
+  background: transparentize($light, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em 1em 5em;
+  font-size: 0.9em;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.header__container * {
+  color: $dark;
+}
+
+.header__logo {
+  cursor: pointer;
+  padding: 0;
+  width: 8em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.header__navToggle {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.header__navToggle--close {
+  font-size: 2em;
+  align-self: flex-end;
+}
+
+.header__navLinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.header__navLinks a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  isolation: isolate;
+  color: lighten($dark, 20%);
+}
+
+.header__navLinks a:hover {
+  color: darken($dark, 50%);
+}
+
+.header__navLinks a::after,
+.header__navLinks a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  bottom: -0.35em;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.header__navLinks a::after {
+  transition: transform 0.05s ease;
+  left: 0;
+  background: transparentize($color: $theme, $amount: 0.75);
+  z-index: -1;
+  transition: transform 0.25s 0.1s ease-out;
+}
+
+.header__navLinks a::before {
+  transition: transform 0.5s ease-out;
+  right: 0;
+  background: $dark;
+}
+
+.header__navLinks a:hover::before {
+  transition: transform 0.25s 0.15s ease-out;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.header__navLinks a:hover::after {
+  transition: transform 0.25s ease-out;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 700px) {
+  .header__logo {
+    width: 3em;
+  }
+
+  .header__container {
+    padding: 1em 2em;
+    font-size: clamp(1em, 6vw, 1.1em);
+  }
+
+  .header__nav {
+    position: absolute;
+    background: $dark;
+    padding: 1em 2em 3em;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.1s 0.25s ease, transform 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .header__nav.active {
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(1, 0, 0, 1);
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .header__nav * {
+    color: $light !important;
+  }
+
+  .header__navLinks {
+    flex-direction: column;
+    padding: 10em 2em 1em;
+    gap: 2em;
+  }
+}
