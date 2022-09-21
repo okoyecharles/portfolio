@@ -13,7 +13,7 @@ interface HeaderProps {
 const headerIntersectStyle: React.CSSProperties = {
   boxShadow: "0 0 0.25em rgba(0, 45, 72, 0.3)",
   position: "sticky",
-  top: "-0.01px",
+  top: "-0.5px",
 };
 
 const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
@@ -33,10 +33,6 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
   }
 
   useEffect(() => {
-    if (browser?.name === "safari") {
-      setIsSticky(true);
-      return;
-    }
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -46,7 +42,11 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
     );
 
     if (headerRef.current) observer.observe(headerRef.current);
-  }, [headerRef]);
+
+    return function(){
+      if (headerRef.current) observer.unobserve(headerRef.current);
+    }
+  }, []);
 
   return (
     <header
