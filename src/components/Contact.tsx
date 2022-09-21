@@ -15,7 +15,11 @@ const slideUp = keyframes`
   }
 `
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  testmode: boolean,
+}
+
+const Contact: React.FC<ContactProps> = ({ testmode }) => {
   return (
     <section className="contact">
       <a id="contact"></a>
@@ -30,7 +34,7 @@ const Contact: React.FC = () => {
               it.
             </p>
           </Reveal>
-          <ContactForm />
+          {!testmode && (<ContactForm />)}
         </div>
       </div>
     </section>
