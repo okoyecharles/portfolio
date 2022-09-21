@@ -4,6 +4,8 @@ import { IoIosMenu, IoIosClose } from "react-icons/io";
 import LogoFull from "../images/personal/logo-full.webp";
 import Logo from "../images/personal/logo.webp";
 import { Fade } from "react-awesome-reveal";
+import { FaAngellist, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 interface HeaderProps {
   mediaWidth: number;
@@ -27,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     setMobileVavActive(false);
-  }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,9 +42,9 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
 
     if (headerRef.current) observer.observe(headerRef.current);
 
-    return function(){
+    return function () {
       if (headerRef.current) observer.unobserve(headerRef.current);
-    }
+    };
   }, []);
 
   return (
@@ -54,7 +56,14 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
       <div className="header__container">
         <div className="header__logo" onClick={() => navigate("/")}>
           <Fade triggerOnce>
-            <img src={mediaWidth > 700 ? LogoFull : Logo} width={mediaWidth > 700 ? "1000": "974"} height={mediaWidth > 700 ? "290" : "586"} alt="Okoye Charles" />
+            <a href="" onClick={scrollToTop}>
+              <img
+                src={mediaWidth > 700 ? LogoFull : Logo}
+                width={mediaWidth > 700 ? "1000" : "974"}
+                height={mediaWidth > 700 ? "290" : "586"}
+                alt="Okoye Charles"
+              />
+            </a>
           </Fade>
         </div>
 
@@ -81,17 +90,94 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
           )}
           <ul className="header__navLinks">
             <li>
-              <a href="" onClick={scrollToTop}>Home</a>
+              <a href="" onClick={scrollToTop}>
+                Home
+              </a>
             </li>
             <li>
-              <a href="#projects" onClick={() => {setMobileVavActive(false)}}>Projects</a>
+              <a
+                href="#projects"
+                onClick={() => {
+                  setMobileVavActive(false);
+                }}
+              >
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#about" onClick={() => {setMobileVavActive(false)}}>About</a>
+              <a
+                href="#about"
+                onClick={() => {
+                  setMobileVavActive(false);
+                }}
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href="#contact" onClick={() => {setMobileVavActive(false)}}>Contact</a>
+              <a
+                href="#contact"
+                onClick={() => {
+                  setMobileVavActive(false);
+                }}
+              >
+                Contact
+              </a>
             </li>
+            {mediaWidth <= 700 && (
+              <li className="header__socialBar">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/OkoyeCharles_"
+                  onClick={() => {
+                    setMobileVavActive(false);
+                  }}
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  href="https://github.com/OkoyeCharles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    setMobileVavActive(false);
+                  }}
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/charles-k-okoye/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    setMobileVavActive(false);
+                  }}
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  href="https://angel.co/u/charles-k-okoye"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    setMobileVavActive(false);
+                  }}
+                >
+                  <FaAngellist />
+                </a>
+                <a
+                  href="mailto:okoyecharles509@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    setMobileVavActive(false);
+                  }}
+                >
+                  <SiGmail />
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
