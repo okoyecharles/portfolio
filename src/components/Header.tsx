@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
-import { detect } from "detect-browser";
 import LogoFull from "../images/personal//Logo-full.svg";
 import Logo from "../images/personal//logo.svg";
 import { Fade } from "react-awesome-reveal";
@@ -22,8 +21,6 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
 
   const headerRef = useRef(null);
   const [isSticky, setIsSticky] = useState<boolean>(false);
-
-  const browser = detect();
 
   const scrollToTop = (event: React.SyntheticEvent) => {
     event.preventDefault();
