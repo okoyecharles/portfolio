@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
-import LogoFull from "../images/personal//Logo-full.svg";
-import Logo from "../images/personal//logo.svg";
+import LogoFull from "../images/personal/logo-full.webp";
+import Logo from "../images/personal/logo.webp";
 import { Fade } from "react-awesome-reveal";
 
 interface HeaderProps {
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
       <div className="header__container">
         <div className="header__logo" onClick={() => navigate("/")}>
           <Fade triggerOnce>
-            <img src={mediaWidth > 700 ? LogoFull : Logo} alt="Okoye Charles" />
+            <img src={mediaWidth > 700 ? LogoFull : Logo} width={mediaWidth > 700 ? "1000": "974"} height={mediaWidth > 700 ? "290" : "586"} alt="Okoye Charles" />
           </Fade>
         </div>
 

@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em 1em 5em;
+  padding: 0.5em 2em 0.5em 5em;
   font-size: 0.9em;
   max-width: 1400px;
   margin-inline: auto;
@@ -23,10 +23,13 @@
 .header__logo {
   cursor: pointer;
   padding: 0;
-  width: 8em;
-  height: 1em;
+  width: 9em;
   display: flex;
   align-items: center;
+}
+
+.header__logo img {
+  height: auto;
 }
 
 .header__navToggle {
@@ -44,13 +47,14 @@
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .header__navLinks a {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 0.95em;
   isolation: isolate;
   color: lighten($dark, 20%);
 }
@@ -102,14 +106,14 @@
   }
 
   .header__container {
-    padding: 1em 2em;
+    padding: 0.5em 2em;
     font-size: clamp(1em, 6vw, 1.1em);
   }
 
   .header__nav {
     position: absolute;
     background: $dark;
-    padding: 1em 2em 3em;
+    padding: 0.5em 2em 3em;
     z-index: 100;
     top: 0;
     left: 0;
