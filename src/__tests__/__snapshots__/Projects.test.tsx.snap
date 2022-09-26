@@ -3,10 +3,8 @@
 exports[`<Projects /> component renders properly 1`] = `
 <section
   className="projects"
+  id="projects"
 >
-  <a
-    id="projects"
-  />
   <div
     className="projects__container"
   >
@@ -61,7 +59,6 @@ exports[`<Projects /> component renders properly 1`] = `
             aria-label="Open Project"
             className="projectCard__arrow"
             onClick={[Function]}
-            role="button"
           >
             <svg
               fill="currentColor"
@@ -108,7 +105,6 @@ exports[`<Projects /> component renders properly 1`] = `
             aria-label="Open Project"
             className="projectCard__arrow"
             onClick={[Function]}
-            role="button"
           >
             <svg
               fill="currentColor"
@@ -155,7 +151,6 @@ exports[`<Projects /> component renders properly 1`] = `
             aria-label="Open Project"
             className="projectCard__arrow"
             onClick={[Function]}
-            role="button"
           >
             <svg
               fill="currentColor"
@@ -202,7 +197,6 @@ exports[`<Projects /> component renders properly 1`] = `
             aria-label="Open Project"
             className="projectCard__arrow"
             onClick={[Function]}
-            role="button"
           >
             <svg
               fill="currentColor"
@@ -271,7 +265,7 @@ exports[`<Projects /> component renders properly 1`] = `
               aria-label="Move to live website"
               className="projectPopup__titleLink"
               href="https://clone-f50ae.web.app/"
-              rel="noreferrer-noopener"
+              rel="-noopener noreferrer"
               target="_blank"
             >
               <svg
@@ -333,7 +327,7 @@ exports[`<Projects /> component renders properly 1`] = `
         >
           <a
             href="https://clone-f50ae.web.app/"
-            rel="noreferrer-noopener"
+            rel="-noopener noreferrer"
             target="_blank"
           >
             <button>
@@ -367,7 +361,7 @@ exports[`<Projects /> component renders properly 1`] = `
           </a>
           <a
             href="https://github.com/OkoyeCharles/amazon-clone"
-            rel="noreferrer-noopener"
+            rel="-noopener noreferrer"
             target="_blank"
           >
             <button>

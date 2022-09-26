@@ -3,10 +3,8 @@
 exports[`<About /> component renders properly 1`] = `
 <section
   className="about"
+  id="about"
 >
-  <a
-    id="about"
-  />
   <div
     className="about__container"
   >
