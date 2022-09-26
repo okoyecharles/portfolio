@@ -48,7 +48,7 @@
 
 ### About My Portfolio
 
-This webisite serves as a collection of my most recent, expertly crafted, and innovative projects as well as a base of knowlegde concerning the abouts of the creator... **Okoye Charles**.
+This website serves as a collection of my most recent, expertly crafted, and innovative projects as well as a base of knowlegde concerning the abouts of the creator... **Okoye Charles**.
 
 <div align="center">
   <img  width="1000" alt="portfolio" src="./src/images/personal/portfolio.webp">
