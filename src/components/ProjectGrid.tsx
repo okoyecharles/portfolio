@@ -37,7 +37,6 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
                 onClick={() => {
                   togglePopup(projectIdx, true);
                 }}
-                role="button"
                 aria-label="Open Project"
               >
                 <IoIosArrowForward />

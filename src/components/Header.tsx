@@ -56,14 +56,14 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
       <div className="header__container">
         <div className="header__logo" onClick={() => navigate("/")}>
           <Fade triggerOnce>
-            <a href="" onClick={scrollToTop}>
+            <div onClick={scrollToTop}>
               <img
                 src={mediaWidth > 700 ? LogoFull : Logo}
                 width={mediaWidth > 700 ? "1000" : "974"}
                 height={mediaWidth > 700 ? "290" : "586"}
                 alt="Okoye Charles"
               />
-            </a>
+            </div>
           </Fade>
         </div>
 
@@ -89,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({ mediaWidth }) => {
             />
           )}
           <ul className="header__navLinks">
-            <li>
+            <li onClick={() => navigate("/")}>
               <a href="" onClick={scrollToTop}>
                 Home
               </a>

@@ -1,19 +1,6 @@
 import React from "react";
 import { FaAngellist, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { keyframes } from "@emotion/react";
-
-const slideIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-0.5em);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 const SocialBar: React.FC = () => {
   return (

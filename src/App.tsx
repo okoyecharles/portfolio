@@ -6,8 +6,6 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import SocialBar from "./components/SocialBar";
 
-const navHeight = document.querySelector(".header")?.getBoundingClientRect();
-
 const App: React.FC = () => {
   const [mediaWidth, setMediaWidth] = useState<number>(1000);
   useEffect(() => {

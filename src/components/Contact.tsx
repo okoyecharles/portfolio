@@ -21,8 +21,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ testmode }) => {
   return (
-    <section className="contact">
-      <a id="contact"></a>
+    <section className="contact" id="contact">
       <div className="contact__container">
         <h2 className="contact__header">Contact</h2>
         <div className="contact__content">

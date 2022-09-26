@@ -55,9 +55,9 @@ const Home: React.FC<HomeProps> = ({ mediaWidth }) => {
               work and experience! If you like what you see and need help on a
               project, I am available for hire.
             </div>
-            <a href="#CONTACT">
+            <a href="#projects">
               <button type="button" className="home__button">
-                CONTACT ME
+                MY PROJECTS
               </button>
             </a>
           </div>
