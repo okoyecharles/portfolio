@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Contact /> component renders properly 1`] = `
+<section
+  className="contact"
+  id="contact"
+>
+  <div
+    className="contact__container"
+  >
+    <h2
+      className="contact__header"
+    >
+      Contact
+    </h2>
+    <div
+      className="contact__content"
+    >
+      <div
+        className="css-sanqhm"
+        style={
+          Object {
+            "animationDelay": "0ms",
+          }
+        }
+      >
+        <p
+          className="contact__coa"
+          style={Object {}}
+        >
+          If you have an 
+          <strong>
+            application
+          </strong>
+           you are interested in developing, a 
+          <strong>
+            feature
+          </strong>
+           that you need built or a
+           
+          <strong>
+            project
+          </strong>
+           that needs coding. I'd love to help with it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

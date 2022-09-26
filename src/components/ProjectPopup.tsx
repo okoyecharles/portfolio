@@ -37,7 +37,7 @@ const ProjectPopup: React.FC<ProjectPopupProps> = ({
               className="projectPopup__titleLink"
               href={project.links.live}
               target="_blank"
-              rel="noreferrer-noopener"
+              rel="-noopener noreferrer"
               aria-label="Move to live website"
             >
               <ImLink />
@@ -57,14 +57,14 @@ const ProjectPopup: React.FC<ProjectPopupProps> = ({
           <a
             href={project.links.live}
             target="_blank"
-            rel="noreferrer-noopener"
+            rel="-noopener noreferrer"
           >
             <button>View Live {mediaWidth > 370 && (<CgArrowTopRightR />)}</button>
           </a>
           <a
             href={project.links.github}
             target="_blank"
-            rel="noreferrer-noopener"
+            rel="-noopener noreferrer"
           >
             <button>View Source {mediaWidth > 370 && (<FiGithub />)}</button>
           </a>

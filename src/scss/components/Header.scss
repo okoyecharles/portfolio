@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em 1em 5em;
+  padding: 0.5em 2em 0.5em 5em;
   font-size: 0.9em;
   max-width: 1400px;
   margin-inline: auto;
@@ -23,10 +23,13 @@
 .header__logo {
   cursor: pointer;
   padding: 0;
-  width: 8em;
-  height: 1em;
+  width: 9em;
   display: flex;
   align-items: center;
+}
+
+.header__logo img {
+  height: auto;
 }
 
 .header__navToggle {
@@ -44,13 +47,14 @@
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .header__navLinks a {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 0.95em;
   isolation: isolate;
   color: lighten($dark, 20%);
 }
@@ -96,20 +100,42 @@
   transform: scaleX(1);
 }
 
+.header__socialBar {
+  margin-top: 1em;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(0.85em, 5vw, 2em);
+}
+
+.header__socialBar::before {
+  content: '';
+  position: absolute;
+  top: -1em;
+  left: 0;
+  width: 100%;
+  height: 0.05rem;
+  background: $light;
+}
+
+.header__socialBar a * {
+  font-size: clamp(1.1em, 5vw, 1.5em);
+}
+
 @media screen and (max-width: 700px) {
   .header__logo {
     width: 3em;
   }
 
   .header__container {
-    padding: 1em 2em;
+    padding: 0.5em 2em;
     font-size: clamp(1em, 6vw, 1.1em);
   }
 
   .header__nav {
     position: absolute;
     background: $dark;
-    padding: 1em 2em 3em;
+    padding: 0.5em 2em 3em;
     z-index: 100;
     top: 0;
     left: 0;
@@ -119,6 +145,7 @@
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
+    border-bottom: 1px solid transparentize($color: $light, $amount: 1 - 0.25);
 
     transition: opacity 0.1s 0.25s ease, transform 0.5s cubic-bezier(1, 0, 0, 1);
   }
@@ -136,7 +163,7 @@
 
   .header__navLinks {
     flex-direction: column;
-    padding: 10em 2em 1em;
+    padding: 10em 2em 0;
     gap: 2em;
   }
 }
