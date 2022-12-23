@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.53141aaf.css",
+    "main.js": "/static/js/main.08d9cde8.js",
+    "static/media/lavish-cuisine.webp": "/static/media/lavish-cuisine.a2113aaad235d0133073.webp",
+    "static/media/nethub.webp": "/static/media/nethub.6e5f725bfd12472f9658.webp",
+    "static/media/OkoyeCharles.webp": "/static/media/OkoyeCharles.7ce5297b533a96d58114.webp",
+    "static/media/amazon-clone.webp": "/static/media/amazon-clone.a1913444d4c44a253b6d.webp",
+    "static/media/hobbies.webp": "/static/media/hobbies.a464f76638ae7b64207b.webp",
+    "static/media/exp.webp": "/static/media/exp.b8df81b67a21985eaae9.webp",
+    "static/media/save-a-child.webp": "/static/media/save-a-child.ef9f82fed893527e4315.webp",
+    "static/media/OkoyeCharles-sm.webp": "/static/media/OkoyeCharles-sm.92eaf9e0e99230a576ab.webp",
+    "static/media/logo.webp": "/static/media/logo.cee35d4dac8bded90904.webp",
+    "static/media/logo-full.webp": "/static/media/logo-full.20f03657250574e5a1d4.webp",
+    "index.html": "/index.html",
+    "main.53141aaf.css.map": "/static/css/main.53141aaf.css.map",
+    "main.08d9cde8.js.map": "/static/js/main.08d9cde8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53141aaf.css",
+    "static/js/main.08d9cde8.js"
+  ]
+}
