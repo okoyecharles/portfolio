@@ -3,15 +3,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://okoyecharles.github.io/portfolio">
-    <img src="./src/images/personal/readme-logo.png" alt="amazon-clone" width="150">
+  <a href="https://okoyecharles-v1.vercel.app">
+    <img src="./src/images/personal/readme-logo.png" alt="portfolio logo" width="150">
   </a>
 
   <h2 align="center">My Portfolio</h2>
 
   <h5 align="center">  
     <br />
-    <a href="https://okoyecharles.github.io/portfolio" target="_blank">View Live</a>
+    <a href="https://okoyecharles-v1.vercel.app" target="_blank">View Live</a>
     ·
     <a href="https://github.com/okoyecharles/portfolio/issues/new" target="_blank">Report Bug</a>
     ·
@@ -133,18 +133,6 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the [MIT](./MIT.md) License.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
-
-## Contact
-
-### Okoye Charles
-
- <div align="center">
- <a href="https://www.linkedin.com/in/charles-k-okoye/"><img src="https://img.shields.io/badge/linkedin-%23000000.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin"></a> <a href="https://twitter.com/okoyecharles_"><img src="https://img.shields.io/badge/Twitter-%23000000.svg?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter"></a> <a href="https://github.com/okoyecharles/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github"></a> <a href="https://angel.co/u/charles-k-okoye"><img src="https://img.shields.io/badge/AngelList-%23000000.svg?style=for-the-badge&logo=AngelList&logoColor=white" alt="AngelList"></a> <a href="mailto:okoyecharles509@gmail.com"><img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=white" alt="Linkedin"></a>
- </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
